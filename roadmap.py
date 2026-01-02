@@ -4,7 +4,6 @@ import streamlit as st
 st.set_page_config(page_title="不動産取引・マスターガイド", layout="wide")
 
 st.title("🗺️ 不動産取引ロードマップ")
-st.write("プロの視点から見た「取引の急所」をすべて公開。安全・有利な取引を実現します。")
 
 tab_sell, tab_buy = st.tabs(["🏠 売却の全工程", "🔑 購入の全工程"])
 
@@ -137,7 +136,7 @@ with tab_sell:
     with s_col1:
         st.info("#### 📝 実務内容とアクション\n" + sell_details[current_sell]['内容'] + "\n\n**【具体的なタスク】**\n" + sell_details[current_sell]['アクション'])
     with s_col2:
-        st.success("#### 💡 プロフェッショナル・ポイント（深掘り）\n" + sell_details[current_sell]['重要ポイント'])
+        st.success("#### 💡 プロフェッショナル・ポイント\n" + sell_details[current_sell]['重要ポイント'])
     st.progress((sell_steps.index(current_sell) + 1) / len(sell_steps))
 
 with tab_buy:
@@ -155,9 +154,10 @@ with tab_buy:
     with b_col1:
         st.info("#### 📝 実務内容とアクション\n" + buy_details[current_buy]['内容'] + "\n\n**【具体的なタスク】**\n" + buy_details[current_buy]['アクション'])
     with b_col2:
-        st.success("#### 💡 プロフェッショナル・ポイント（深掘り）\n" + buy_details[current_buy]['ポイント'])
+        st.success("#### 💡 プロフェッショナル・ポイント\n" + buy_details[current_buy]['ポイント'])
     st.progress((buy_steps.index(current_buy) + 1) / len(buy_steps))
 
 st.divider()
 st.caption("※本ロードマップは実務上の一般的な流れであり、取引形態によって異なる項目があります。")
+
 
