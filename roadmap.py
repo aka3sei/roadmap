@@ -123,7 +123,7 @@ buy_details = {
 # ==========================================
 with tab_sell:
     # --- バーの変更箇所（売却） ---
-    sell_short = ["相談", "調査", "査定", "契約", "診断", "活動", "交渉", "重説", "決済"]
+    sell_short = ["相談", "調査", "査定", "媒介", "診断", "活動", "交渉", "重説", "決済"]
     cols_s = st.columns(len(sell_short))
     for i, name in enumerate(sell_short):
         cols_s[i].caption(f"{i+1}.{name}")
@@ -159,5 +159,6 @@ with tab_buy:
 
 st.divider()
 st.caption("※本ロードマップは実務上の一般的な流れであり、取引形態によって異なる項目があります。")
+
 
 
